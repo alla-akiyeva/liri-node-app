@@ -1,6 +1,7 @@
 # liri-node-app
 
 ![Concert] (./assets/Concert-this.gif)
+![](/assets/Concert-this.gif)
 
 ![Song] (/assets/Song.gif)
 
