@@ -21,7 +21,7 @@ To run the app, the user must run the `liri` file in the command line followed b
 
 ### Command 1: Searching for concerts
 
-Here is an example of using the `concert-this` command to search for Rammstein's concerts:
+Here is an example of using the `concert-this` command to search for Rammstein's concerts (`node liri concert-this rammstein`):
 
 ![](/assets/Concert-this.gif)
 
@@ -29,7 +29,7 @@ In case the user enters the `concert-this` command but does not specify a perfor
 
 ### Command 2: Searching for a song
 
-Here is an example of using the `spotify-this` command to search for the song "In The End" by Linkin Park. 
+Here is an example of using the `spotify-this` command to search for "In The End" by Linkin Park (`node liri spotify-this in the end`). 
 
 ![](/assets/Song.gif)
 
@@ -37,7 +37,7 @@ In case the user enters the `spotify-this` command but does not specify a song, 
 
 ### Command 3: Searching for a movie
 
-Here is an example of using the `movie-this` command to search for the Last of the Mohicans movie. 
+Here is an example of using the `movie-this` command to search for the Last of the Mohicans movie (`node liri movie-this last of the mohicans`). 
 
 ![](/assets/Movie.gif)
 
