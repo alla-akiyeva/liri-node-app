@@ -1,6 +1,13 @@
 # liri-node-app
 
-A back-end application that sends AJAX requests to three different APIs. Users can search for movies, songs or their favorite band or singer's concerts.
+LIRI (Language Interpretation and Recognition Interface) is a command line Node.js app that takes in parameters and gives back data. LIRI will search Spotify for songs, Bands in Town for concerts, and OMDB for movies. 
+
+### Node packages used
+
+* [Node-Spotify-API](https://www.npmjs.com/package/node-spotify-api)
+* [Axios](https://www.npmjs.com/package/axios) - used to retrieve data from the [OMDB API](http://www.omdbapi.com/) and the [Bands In Town API](https://www.artists.bandsintown.com)
+* [Moment](https://www.npmjs.com/package/moment) - used to format the date
+* [DotEnv](https://www.npmjs.com/package/dotenv) - used to set environmental variables
 
 ### How It Works
 
@@ -10,7 +17,7 @@ There are four different commands available:
 * `spotify-this <song name here>` 
 * `do-this`
 
-To run the app, the user run the `liri` file in the command line followed by one of the four commands. 
+To run the app, the user must run the `liri` file in the command line followed by one of the four commands. 
 
 ### Command 1: Searching for concerts
 
@@ -40,14 +47,8 @@ In case the user enters the `movie-this` command but does not specify a movie, t
 
 Using the `fs` Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
 
-It should run `spotify-this` for Jack White, as follows the text in random.txt. By editing the text in `random.txt`, users can run any of the other two LIRI commands (`spotify-this` or `movie-this`) by entering `do-this`. 
+It should run `spotify-this` for Jack White, as follows the text in random.txt. By editing the text in `random.txt`, users can run either of the other two LIRI commands (`spotify-this` or `movie-this`) when entering `do-this`. 
 
 ![](/assets/do-this.gif)
 
-Please note that, if downloading this app and running it locally, the user must provide their own .env file and Spotify ID. 
-
-### Built With
-* Node.js 
-* [Node-Spotify-API](https://www.npmjs.com/package/node-spotify-api)
-* [OMDB API](http://www.omdbapi.com/)
-* [Bands In Town API](https://www.artists.bandsintown.com). 
+Please note that the user must provide their own .env file and Spotify ID to run this app locally. 
