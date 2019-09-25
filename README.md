@@ -12,11 +12,15 @@ There are four different commands available:
 
 To run the app, the user run the `liri` file in the command line followed by one of the four commands. 
 
+### Command 1: Searching for concerts
+
 Here is an example of using the `concert-this` command to search for Rammstein's concerts:
 
 ![](/assets/Concert-this.gif)
 
 In case the user enters the `concert-this` command but does not specify a performer, the app will search for Lady Gaga's concerts by default. 
+
+### Command 2: Searching for a song
 
 Here is an example of using the `spotify-this` command to search for the song "In The End" by Linkin Park. 
 
@@ -24,11 +28,15 @@ Here is an example of using the `spotify-this` command to search for the song "I
 
 In case the user enters the `spotify-this` command but does not specify a song, the app will search for "Somewhere Over the Rainbow" by default.
 
+### Command 3: Searching for a movie
+
 Here is an example of using the `movie-this` command to search for the Last of the Mohicans movie. 
 
 ![](/assets/Movie.gif)
 
 In case the user enters the `movie-this` command but does not specify a movie, the app will search for "Mr. Nobody" by default.
+
+### Command 4: Reading commands from a `.txt` file
 
 Using the `fs` Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
 
