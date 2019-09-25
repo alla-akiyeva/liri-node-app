@@ -14,7 +14,7 @@ var cmd = process.argv[2];
 var term = process.argv.slice(3).join("+");
 
 // Bands in Town API
-function findConcert() {
+function findConcert(term) {
     var queryURL = `https://rest.bandsintown.com/artists/${term}/events?app_id=codingbootcamp`; 
     axios.get(queryURL).then(function (response) {
         for (var i=0; i < response.data.length; i++) {
@@ -30,7 +30,7 @@ function findConcert() {
 }
 
 // Spotify API
-function findSong() {
+function findSong(term) {
     var spotify = new Spotify (keys.spotify);
     spotify.search({type: 'track', query: term })
     .then(function (response) {
@@ -43,7 +43,7 @@ function findSong() {
             console.log("Album: " + song.album.name);
             console.log("--------------");
         } else {
-            console.log("--- Could not find this song! Please try another one. ---")
+            console.log("--- Could not find this song! Please check your spelling or try another one. ---")
         }
     }).catch(function (error) {
         console.log(error);
@@ -51,7 +51,7 @@ function findSong() {
 }
 
 // MDb API call
-function findMovie() {
+function findMovie(term) {
     var queryURL = `http://www.omdbapi.com/?apikey=d690e4f5&t=${term}`;
     axios.get(queryURL).then(function (response) {
         var movie = response.data;
@@ -96,21 +96,21 @@ function condition() {
     switch (cmd) {
         case "concert-this":
             console.log("Searching for concerts...");
-            findConcert(term);
+            term ? findConcert(term) : findConcert("Lady Gaga");
         break;
         case "spotify-this":
             console.log("Searching for a song...");
-            findSong(term);
+            term ? findSong(term) : findSong("Somewhere Over the Rainbow");
         break;
         case "movie-this":
             console.log("Searching for a movie...");
-            findMovie(term);
+            term ? findMovie(term) : findMovie("Mr Nobody");
         break;
-        case "do-what-it-says":
+        case "do-this":
             txtf();
         break;
         default:
-            console.log("Please search for a concert, song or movie!\nAvailable commands: \n  concert-this <artist/band name here> \n  movie-this <movie name here> \n  spotify-this <song name here> \n  do-what-it-says");
+            console.log("Please search for a concert, song or movie!\nAvailable commands: \n  concert-this <artist/band name here> \n  movie-this <movie name here> \n  spotify-this <song name here> \n  do-this");
         break;
     }
 }
