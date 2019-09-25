@@ -51,4 +51,4 @@ It should run `spotify-this` for Jack White, as follows the text in random.txt. 
 
 ![](/assets/do-this.gif)
 
-Please note that the user must provide their own .env file and Spotify ID to run this app locally. 
+Please note that the user must provide their own .env file and Spotify ID to run this app locally and search for songs. 
