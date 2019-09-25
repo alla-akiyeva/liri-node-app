@@ -1,9 +1,9 @@
 # liri-node-app
 
-![] (assets/Concert-this.gif)
+![Concert] (/assets/Concert-this.gif)
 
-![] (assets/Song.gif)
+![Song] (/assets/Song.gif)
 
-![] (assets/Movie.gif)
+![Movie] (/assets/Movie.gif)
 
-![] (assets/do-this.gif)
+![Do] (/assets/do-this.gif)
